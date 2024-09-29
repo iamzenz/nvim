@@ -1,8 +1,6 @@
--- Grab configuration files from the zenzilla database
 require("config.lazy")
 require("config.maps")
 require("lazy").setup("plugins")
-
 -- global dictionaries can be accessed via vim.*
 -- g for global, b for buffer, w for window, t for tab, v for variables, o for options, etc.
 -- vim.opt is a global variable that allows you to set vim options
@@ -15,6 +13,9 @@ require("lazy").setup("plugins")
 -- show line numbers and make them relative
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+-- set line numbers for netrw
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 
 -- set tabs
 vim.opt.tabstop = 4
@@ -45,3 +46,9 @@ vim.opt.isfname:append("@-@")
 
 -- set update time
 vim.opt.updatetime = 50
+
+-- autosave
+vim.api.nvim_create_autocmd(
+        { "FocusLost", "ModeChanged", "TextChanged", "BufEnter" },
+        { desc = "autosave", pattern = "*", command = "silent! update" }
+)
