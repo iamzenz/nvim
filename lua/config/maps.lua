@@ -1,7 +1,19 @@
--- ~/nvim/lua/slydragonn/maps.lua
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                         Keymaps                         ║
+--          ╚═════════════════════════════════════════════════════════╝
 
-vim.g.mapleader = " "
+-- Keymaps are the bread and butter of vim. They are what make vim so powerful and efficient.
 
+
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+-- 1. Add descriptions to all keymaps. Done.
+-- 2. Add more keymaps
+
+
+vim.g.mapleader = " " -- Set space as the leader key
+
+-- Helper function to map keys
 local function map(mode, lhs, rhs, opts)
     opts = opts or { silent = true }
     -- Make sure lhs and rhs are strings
@@ -14,42 +26,42 @@ end
 
 
 -- Save
-map("n", "<leader>w", "<CMD>update<CR>")
+map("n", "<leader>w", "<CMD>update<CR>", { desc = "Save" })
 
 -- Quit
-map("n", "<leader>q", "<CMD>q<CR>")
+map("n", "<leader>q", "<CMD>q<CR>", { desc = "Quit" })
 
 -- Exit insert mode
-map("i", "jk", "<ESC>")
+map("i", "jk", "<ESC>", { noremap = true, silent = true })
 
 -- NeoTree
-map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
-map("n", "<leader>r", "<CMD>Neotree focus<CR>")
+map("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
+map("n", "<leader>r", "<CMD>Neotree focus<CR>", { desc = "Focus on NeoTree" })
 
 -- Undotree
-map("n", "<leader>u", "<CMD>UndotreeToggle<CR>")
+map("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Toggle undotree" })
 
 -- New Windows
-map("n", "<leader>o", "<CMD>vsplit<CR>")
-map("n", "<leader>p", "<CMD>split<CR>")
+map("n", "<leader>o", "<CMD>vsplit<CR>", { desc = "Open a new window vertically" })
+map("n", "<leader>p", "<CMD>split<CR>", { desc = "Open a new window horizontally" })
+
 
 -- Window Navigation
--- map("n", "<C-h>", "<C-w>h")
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-j>", "<C-w>j")
+map("n", "<C-l>", "<C-w>l", { desc = "Navigate to the right window" })
+map("n", "<C-k>", "<C-w>k", { desc = "Navigate to the window above" })
+map("n", "<C-j>", "<C-w>j", { desc = "Navigate to the window below" })
 
 -- Resize Windows
-map("n", "<C-Left>", "<C-w><")
-map("n", "<C-Right>", "<C-w>>")
-map("n", "<C-Up>", "<C-w>+")
-map("n", "<C-Down>", "<C-w>-")
+map("n", "<C-Left>", "<C-w><", { desc = "Resize window to the left" })
+map("n", "<C-Right>", "<C-w>>", { desc = "Resize window to the right" })
+map("n", "<C-Up>", "<C-w>+", { desc = "Resize window up" })
+map("n", "<C-Down>", "<C-w>-", { desc = "Resize window down" })
 
 
 
 -- Jump back to file directory
-map("n", "<leader>pv", "<CMD>Ex<CR>")
-map("n", "-", "<CMD>Ex<CR>")
+map("n", "<leader>pv", "<CMD>Ex<CR>", { desc = "Jump back to file directory" })
+map("n", "-", "<CMD>Ex<CR>", { desc = "Jump back to file directory" })
 
 
 -- Helix inspired remaps because I never liked ^ and $
@@ -65,52 +77,50 @@ map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Drag selection up one line" })
 map("n", "J", "mzJ`z", { desc = "Keep cursor in place when appending rows" })
 
 -- Keep cursor in the middle of the screen when scrolling with d, u
-map("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor in the middle of the screen when scrolling down" })
-map("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor in the middle of the screen when scrolling up" })
+-- map("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor in the middle of the screen when scrolling down" })
+-- map("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor in the middle of the screen when scrolling up" })
 
 -- keep search terms in the middle of the screen
 map("n", "n", "nzzzv", { desc = "Keep next search term in the middle of the screen" })
 map("n", "N", "Nzzzv", { desc = "Keep previous search terms in the middle of the screen" })
 
 -- yanks into a secondary buffer so you dont lose your yank
-map("x", "<leader>p", [["_dP]], { desc = "Yank into an alternate buffer so it doesnt get lost" })
+-- map("x", "<leader>p", [["_dP]], { desc = "Yank into an alternate buffer so it doesnt get lost" })
 
--- next greatest remap ever : asbjornHaland
--- TODO: what does this do
-map("v", "<leader>y", '"+y')
-map("n", "<leader>Y", '"+Y')
+-- cred to asbjornHaland
+-- Yank to system clipboard 
+map("v", "<leader>y", '"+y', { desc = "Yank selection to system clipboard" })
+map("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
 
--- TODO: what does this do
---map({ "n", "v" }, "<leader>d", [["_d]])
-
-map("n", "Q", "<nop>")
+-- Delete without yanking
+-- map("n", "v", "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
 -- Look this up laterhttps://crates.io/crates/tmux-sessionizer
---map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux-sessionizer" })
 
+-- LSP
 -- map("n", "<leader>f", vim.lsp.buf.format, { desc = "[F]ormat file using LSP" })
-
 map("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" });
-
 map("n", "<leader>fj", "<cmd>%!jq '.'<CR>", { desc = "[F]ormat [J]son file" });
 
 -- TODO: learn how to use marks/tags?
 -- map("n", "<C-k>", "<cmd>cnext<CR>zz")
-map("n", "<C-j>", "<cmd>cprev<CR>zz")
-map("n", "<leader>k", "<cmd>lnext<CR>zz")
-map("n", "<leader>j", "<cmd>lprev<CR>zz")
+-- map("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- map("n", "<leader>k", "<cmd>lnext<CR>zz")
+-- map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Make current file executable
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { desc = "Add executable permissions to the current buffer" })
 
 -- Replace the word under cursor thoughout the file
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace the word under cursor throughout the file" })
 
--- terminal remaps
--- map("t", "<Esc>", "<C-\\><C-n>", { noremap = true }, { desc = "Escape insert mode in a terminal" })
---
--- --tabpage rempas
+-- --tabpage remaps
 -- map("n", "<leader>ta", "<cmd>tabnew<CR>", { desc = "[T]abpage [A]dd new tab" })
 -- map("n", "<leader>tr", "<cmd>tabclose<CR>", { desc = "[T]abpage [R]emove current tab" })
 -- map("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "[T]abpage [N]ext tab" })
 -- map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious tab" })
+
+
+
+-- Config inspo: slydragonn/maps.lua

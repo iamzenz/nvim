@@ -9,11 +9,8 @@ return {
 		end,
 	},
 
-	"theprimeagen/harpoon",
-	"mbbill/undotree",
 	"tpope/vim-fugitive",
-	"karb94/neoscroll.nvim",
-        "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
 
 	{
 		"nvim-telescope/telescope.nvim",
@@ -22,7 +19,6 @@ return {
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 
-	"numToStr/Comment.nvim",
 
 	-- Language server
 	{
