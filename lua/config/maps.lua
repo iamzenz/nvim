@@ -38,12 +38,18 @@ map("i", "jk", "<ESC>", { noremap = true, silent = true })
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
 map("n", "<leader>r", "<CMD>Neotree focus<CR>", { desc = "Focus on NeoTree" })
 
+-- Tabs
+map("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New tab" })
+map("n", "<leader><tab>d", "<CMD>tabclose<CR>", { desc = "Close tab" })
+map("n", "<leader>t", "<CMD>+tabnext<CR>", { desc = "Next tab" })
+map("n", "<leader>pt", "<CMD>-tabnext<CR>", { desc = "Previous tab" })
+
 -- Undotree
 map("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Toggle undotree" })
 
 -- New Windows
 map("n", "<leader>o", "<CMD>vsplit<CR>", { desc = "Open a new window vertically" })
-map("n", "<leader>p", "<CMD>split<CR>", { desc = "Open a new window horizontally" })
+map("n", "<leader>h", "<CMD>split<CR>", { desc = "Open a new window horizontally" })
 
 
 -- Window Navigation
