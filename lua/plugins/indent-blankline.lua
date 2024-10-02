@@ -7,7 +7,7 @@
 -- 2. Add dots in lieu of spaces
 -- 3. Make indent lines thinner
 
-
+-- ══ CONFIGURATION: ═
 return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",

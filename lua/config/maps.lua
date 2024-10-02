@@ -13,17 +13,10 @@
 
 vim.g.mapleader = " " -- Set space as the leader key
 
--- Helper function to map keys
-local function map(mode, lhs, rhs, opts)
-    opts = opts or { silent = true }
-    -- Make sure lhs and rhs are strings
-    if type(lhs) == 'string' and type(rhs) == 'string' then
-        vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
-    else
-        print("Invalid keymap: lhs or rhs is not a string")
-    end
-end
 
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap
 
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>", { desc = "Save" })
@@ -53,9 +46,10 @@ map("n", "<leader>h", "<CMD>split<CR>", { desc = "Open a new window horizontally
 
 
 -- Window Navigation
+map("n", "<leader>h", "<C-w>h", { desc = "Navigate to the left window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Navigate to the right window" })
-map("n", "<C-k>", "<C-w>k", { desc = "Navigate to the window above" })
-map("n", "<C-j>", "<C-w>j", { desc = "Navigate to the window below" })
+map("n", "<leader>k", "<C-w>k", { desc = "Navigate to the window above" })
+map("n", "<leader>j", "<C-w>j", { desc = "Navigate to the window below" })
 
 -- Resize Windows
 map("n", "<C-Left>", "<C-w><", { desc = "Resize window to the left" })
@@ -63,7 +57,9 @@ map("n", "<C-Right>", "<C-w>>", { desc = "Resize window to the right" })
 map("n", "<C-Up>", "<C-w>+", { desc = "Resize window up" })
 map("n", "<C-Down>", "<C-w>-", { desc = "Resize window down" })
 
-
+-- Indent Blocks
+map('v', '<', '<gv', opts)
+map('v', '>', '>gv', opts)
 
 -- Jump back to file directory
 map("n", "<leader>pv", "<CMD>Ex<CR>", { desc = "Jump back to file directory" })
@@ -116,7 +112,7 @@ map("n", "<leader>fj", "<cmd>%!jq '.'<CR>", { desc = "[F]ormat [J]son file" });
 -- map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Make current file executable
-map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { desc = "Add executable permissions to the current buffer" })
+-- map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { desc = "Add executable permissions to the current buffer" })
 
 -- Replace the word under cursor thoughout the file
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace the word under cursor throughout the file" })
@@ -127,6 +123,17 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { 
 -- map("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "[T]abpage [N]ext tab" })
 -- map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious tab" })
 
+-- Insert a blank line below or above current line (do not move the cursor),
+-- see https://stackoverflow.com/a/16136133/6064933
+keymap.set("n", "<leader>o", "printf('m`%so<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line below",
+})
 
+keymap.set("n", "<leader>O", "printf('m`%sO<ESC>``', v:count1)", {
+  expr = true,
+  desc = "insert line above",
+})
 
+-- https://github.com/oyinbra/nvim-config
 -- Config inspo: slydragonn/maps.lua
