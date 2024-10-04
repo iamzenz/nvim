@@ -37,6 +37,25 @@ map("n", "<leader><tab>d", "<CMD>tabclose<CR>", { desc = "Close tab" })
 map("n", "<leader>t", "<CMD>+tabnext<CR>", { desc = "Next tab" })
 map("n", "<leader>pt", "<CMD>-tabnext<CR>", { desc = "Previous tab" })
 
+-- Substitute.nvim
+-- keymap.set("n", "s", require('substitute').operator, { noremap = true })
+-- keymap.set("n", "ss", require('substitute').line, { noremap = true })
+-- keymap.set("n", "S", require('substitute').eol, { noremap = true })
+-- keymap.set("x", "s", require('substitute').visual, { noremap = true })
+--
+-- Substitute operator
+-- keymap.set("n", "<leader>s", require('substitute').operator, { noremap = true, desc = "Substitute operator" })
+--
+-- -- Substitute the whole line
+-- keymap.set("n", "<leader>ss", require('substitute').line, { noremap = true, desc = "Substitute whole line" })
+--
+-- -- Substitute to the end of the line
+-- keymap.set("n", "<leader>S", require('substitute').eol, { noremap = true, desc = "Substitute to end of line" })
+--
+-- -- Substitute visually selected text
+-- keymap.set("x", "<leader>s", require('substitute').visual, { noremap = true, desc = "Substitute visual selection" })
+
+
 -- Undotree
 map("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Toggle undotree" })
 
@@ -115,13 +134,13 @@ map("n", "<leader>fj", "<cmd>%!jq '.'<CR>", { desc = "[F]ormat [J]son file" });
 -- map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { desc = "Add executable permissions to the current buffer" })
 
 -- Replace the word under cursor thoughout the file
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace the word under cursor throughout the file" })
+-- map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace the word under cursor throughout the file" })
 
 -- --tabpage remaps
--- map("n", "<leader>ta", "<cmd>tabnew<CR>", { desc = "[T]abpage [A]dd new tab" })
--- map("n", "<leader>tr", "<cmd>tabclose<CR>", { desc = "[T]abpage [R]emove current tab" })
--- map("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "[T]abpage [N]ext tab" })
--- map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious tab" })
+map("n", "<leader>ta", "<cmd>tabnew<CR>", { desc = "[T]abpage [A]dd new tab" })
+map("n", "<leader>tr", "<cmd>tabclose<CR>", { desc = "[T]abpage [R]emove current tab" })
+map("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "[T]abpage [N]ext tab" })
+map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious tab" })
 
 -- Insert a blank line below or above current line (do not move the cursor),
 -- see https://stackoverflow.com/a/16136133/6064933
