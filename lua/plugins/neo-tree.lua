@@ -81,7 +81,7 @@ return {
 
     filesystem = {
       filtered_items = {
-        visible = false,
+        visible = true,
         hide_dotfiles = true,
         hide_gitignored = true,
         hide_hidden = true, -- only works on Windows for hidden files/directories
@@ -103,14 +103,18 @@ return {
           ".null-ls_*",
         },
       },
-      follow_current_file = true, -- This will find and focus the file in the active buffer every time
+      follow_current_file = {
+        enable = true,
+      },
       group_empty_dirs = false, -- when true, empty folders will be grouped together
       hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
       use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
     },
 
     buffers = { -- now properly indented
-      follow_current_file = true, -- This will find and focus the file in the active buffer every time
+      follow_current_file = {
+          enable = true,
+      },-- This will find and focus the file in the active buffer every time
       group_empty_dirs = true, -- when true, empty folders will be grouped together
       show_unloaded = true,
     },
