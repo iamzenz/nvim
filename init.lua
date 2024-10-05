@@ -1,10 +1,9 @@
 --          ╔═════════════════════════════════════════════════════════╗
---          ║                         LazyGit                         ║
+--          ║                         Lazy.nvim                       ║
 --          ╚═════════════════════════════════════════════════════════╝
 
 require("config.lazy")
 require("config.maps")
-require("lazy").setup("plugins")
 -- global dictionaries can be accessed via vim.*
 -- g for global, b for buffer, w for window, t for tab, v for variables, o for options, etc.
 -- vim.opt is a global variable that allows you to set vim options
