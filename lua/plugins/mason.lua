@@ -35,7 +35,6 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        "lua_ls",
         "pyright",
       },
       -- auto-install configured servers (with lspconfig)
@@ -45,10 +44,10 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        -- "isort", -- python formatter
+        -- "stylua", -- lua formatter
+        "isort", -- python formatter
         "black", -- python formatter
-        -- "pylint", -- python linter
+        "pylint", -- python linter
       },
     })
   end,
