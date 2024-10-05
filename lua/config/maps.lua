@@ -16,7 +16,7 @@ vim.g.mapleader = " " -- Set space as the leader key
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-local keymap = vim.keymap
+local keymap = vim.keymap.set
 
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>", { desc = "Save" })
@@ -65,10 +65,10 @@ map("n", "<leader>h", "<CMD>split<CR>", { desc = "Open a new window horizontally
 
 
 -- Window Navigation
-map("n", "<leader>h", "<C-w>h", { desc = "Navigate to the left window" })
-map("n", "<C-l>", "<C-w>l", { desc = "Navigate to the right window" })
-map("n", "<leader>k", "<C-w>k", { desc = "Navigate to the window above" })
-map("n", "<leader>j", "<C-w>j", { desc = "Navigate to the window below" })
+map("n", "<A-h>", "<C-w>h", { desc = "Navigate to the left window" })
+map("n", "<A-l>", "<C-w>l", { desc = "Navigate to the right window" })
+map("n", "<A-k>", "<C-w>k", { desc = "Navigate to the window above" })
+map("n", "<A-j>", "<C-w>j", { desc = "Navigate to the window below" })
 
 -- Resize Windows
 map("n", "<C-Left>", "<C-w><", { desc = "Resize window to the left" })
@@ -144,12 +144,12 @@ map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious ta
 
 -- Insert a blank line below or above current line (do not move the cursor),
 -- see https://stackoverflow.com/a/16136133/6064933
-keymap.set("n", "<leader>o", "printf('m`%so<ESC>``', v:count1)", {
+keymap("n", "<leader>o", "printf('m`%so<ESC>``', v:count1)", {
   expr = true,
   desc = "insert line below",
 })
 
-keymap.set("n", "<leader>O", "printf('m`%sO<ESC>``', v:count1)", {
+keymap("n", "<leader>O", "printf('m`%sO<ESC>``', v:count1)", {
   expr = true,
   desc = "insert line above",
 })
