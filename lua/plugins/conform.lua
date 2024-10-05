@@ -17,7 +17,6 @@ return {
                 json = { "prettier" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },
-                lua = { "stylua" },
                 python = { "isort", "black" },
             },
             format_on_save = {
@@ -36,4 +35,3 @@ return {
         end, { desc = "Format file or range (in visual mode)" })
     end,
 }
-
