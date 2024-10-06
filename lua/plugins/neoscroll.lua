@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     neoscroll.nvim                      ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │ neoscroll.nvim enables smooth scrolling animations for  │
+--          │         a more pleasant navigation experience.          │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     'karb94/neoscroll.nvim',
     config = function()

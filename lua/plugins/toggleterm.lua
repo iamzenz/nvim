@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     toggleterm.nvim                     ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │  toggleterm.nvim integrates terminal management within  │
+--          │    the editor, allowing multiple terminal instances.    │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     'akinsho/toggleterm.nvim', version = "*", 
     opts = {

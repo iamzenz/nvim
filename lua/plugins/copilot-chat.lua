@@ -3,6 +3,11 @@
 --          ╚═════════════════════════════════════════════════════════╝
 
 
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+-- - [ ] Need access to the rest of the commands
+-- - [ ] Copilot autocomplete <tab> does not work within the chat
+
 return {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
@@ -17,4 +22,5 @@ return {
         -- See Configuration section for rest
     },
     cmd = "CopilotChat",
+
 }

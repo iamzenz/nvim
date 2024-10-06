@@ -1,3 +1,14 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                      trouble.nvim                       ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │     trouble.nvim provides a pretty list to help you     │
+--          │    solve all the diagnostics, references, and other     │
+--          │                  issues in your code.                   │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
   "folke/trouble.nvim",
   opts = {}, -- for default options, refer to the configuration section for custom setup.

@@ -1,3 +1,14 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                       aerial.nvim                       ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │   Aerial.nvim lets you navigate your code with search   │
+--          │   labels, enhanced character motions, and Treesitter    │
+--          │                      integration.                       │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     'stevearc/aerial.nvim',
     enable = true,

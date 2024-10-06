@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     which-key.nvim                      ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │   which-key.nvim displays available keybindings in a    │
+--          │  popup, helping users discover and remember shortcuts.  │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     "folke/which-key.nvim",
     event = "VeryLazy",

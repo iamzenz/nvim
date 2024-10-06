@@ -1,3 +1,9 @@
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+-- - [ ] Add keymap to refocus on current buffer
+-- - [ ] Add file preview on hover
+
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",

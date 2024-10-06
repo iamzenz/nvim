@@ -3,7 +3,10 @@
 --          ╚═════════════════════════════════════════════════════════╝
 
 
--- ══ Config from Ninjagor ════════════════════════════════════════════
+--          ┌─────────────────────────────────────────────────────────┐
+--          │  lspconfig.nvim simplifies the setup and configuration  │
+--          │  of language servers for Neovim's built-in LSP client.  │
+--          └─────────────────────────────────────────────────────────┘
 
 
 return {
@@ -12,7 +15,7 @@ return {
   dependencies = {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
-  config = function()
+  config = function() -- config from Ninjagor
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 

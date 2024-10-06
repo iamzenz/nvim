@@ -1,4 +1,19 @@
--- ~/nvim/lua/slydragonn/plugins/gitsigns.lua
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                      gitsigns.nvim                      ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │    `hlchunk.nvim` highlights code chunks to improve     │
+--          │      readability and navigation within the editor.      │
+--          └─────────────────────────────────────────────────────────┘
+
+
+
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+--  - [ ] Is it possible to add + and - signs instead of the default?
+
+
 
 return {
     "lewis6991/gitsigns.nvim",

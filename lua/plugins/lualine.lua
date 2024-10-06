@@ -1,4 +1,12 @@
--- ~/nvim/lua/slydragonn/plugins/lualine.lua
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                      lualine.nvim                       ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │   lualine.nvim is a fast and customizable statusline    │
+--          │                 plugin written in Lua.                  │
+--          └─────────────────────────────────────────────────────────┘
+
 
 return {
     "nvim-lualine/lualine.nvim",
@@ -8,4 +16,3 @@ return {
         require("lualine").setup()
     end,
 }
-

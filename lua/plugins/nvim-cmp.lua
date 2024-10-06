@@ -2,8 +2,11 @@
 --          ║                        nvim-cmp                         ║
 --          ╚═════════════════════════════════════════════════════════╝
 
-
--- ══ Config from slydragonn ══════════════════════════════════════════
+--          ┌─────────────────────────────────────────────────────────┐
+--          │     nvim-cmp is a completion plugin for Neovim that     │
+--          │     provides an extensible and highly configurable      │
+--          │               auto-completion framework.                │
+--          └─────────────────────────────────────────────────────────┘
 
 
 return {
@@ -15,7 +18,7 @@ return {
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim", -- vs-code like pictograms
     },
-    config = function()
+    config = function() -- config from slydragonn
         local cmp = require("cmp")
         local lspkind = require("lspkind")
 

@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     bufferline.nvim                     ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │  bufferline.nvim provides a customizable and visually   │
+--          │    appealing buffer line for managing open buffers.     │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     "akinsho/nvim-bufferline.lua",
     -- keys are configured in keymaps.lua

@@ -1,8 +1,14 @@
 --          ╔═════════════════════════════════════════════════════════╗
---          ║                         comment                         ║
+--          ║                      comment.nvim                       ║
 --          ╚═════════════════════════════════════════════════════════╝
 
--- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+--          ┌─────────────────────────────────────────────────────────┐
+--          │  `comment.nvim` provides easy and efficient commenting  │
+--          │  functionality for code, supporting multiple languages  │
+--          │             and customizable key mappings.              │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     'numToStr/Comment.nvim',
     config = function()

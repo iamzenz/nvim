@@ -2,16 +2,23 @@
 --          ║                         Lazy.nvim                       ║
 --          ╚═════════════════════════════════════════════════════════╝
 
+--          ┌─────────────────────────────────────────────────────────┐
+--          │    lazy.nvim is a modern plugin manager for Neovim.     │
+--          └─────────────────────────────────────────────────────────┘
+
+
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+--  - [ ] Create a plugin to automatically add title, description and todo list for config files
+--  - [x] Add titles and descriptions to all plugins
+--  - [ ] Organize plugins by category?
+
+
+
 require("config.lazy")
-require("config.maps")
--- global dictionaries can be accessed via vim.*
--- g for global, b for buffer, w for window, t for tab, v for variables, o for options, etc.
--- vim.opt is a global variable that allows you to set vim options
+require("config.keymaps")
 
 -- :help lua-vim-variables
--- :help vim-variables
--- :help set-option
--- :help vim.opt
 
 -- show line numbers and make them relative
 vim.opt.nu = true

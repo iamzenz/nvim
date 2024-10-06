@@ -1,3 +1,14 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                       Colorscheme                       ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │      `kanagawa.nvim` is a color scheme inspired by      │
+--          │     traditional Japanese art, providing a visually      │
+--          │       appealing and cohesive look for the editor.       │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
 	{
 		"rebelot/kanagawa.nvim",

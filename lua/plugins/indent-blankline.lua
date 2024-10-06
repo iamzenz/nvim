@@ -2,12 +2,18 @@
 --          ║                    Indent-Blankline                     ║
 --          ╚═════════════════════════════════════════════════════════╝
 
+--          ┌─────────────────────────────────────────────────────────┐
+--          │  indent-blankline.nvim adds indentation guides to all   │
+--          │              lines, including empty lines.              │
+--          └─────────────────────────────────────────────────────────┘
+
+
 -- ══ TODO: ═══════════════════════════════════════════════════════════
 -- 1. Add a toggle command to enable/disable the plugin
 -- 2. Add dots in lieu of spaces
 -- 3. Make indent lines thinner
 
--- ══ CONFIGURATION: ═
+
 return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",

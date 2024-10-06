@@ -1,4 +1,13 @@
--- plugins/telescope.lua:
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     telescope.nvim                      ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │   telescope.nvim is a highly extendable fuzzy finder    │
+--          │      over lists, such as files, buffers, and more.      │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
   'nvim-telescope/telescope.nvim',
   tag = '0.1.8',

@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                     autoclose.nvim                      ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │ autoclose.nvim provides automatic closing of brackets,  │
+--          │          quotes, and other paired characters.           │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
     "m4xshen/autoclose.nvim",
     event = { "InsertEnter" },

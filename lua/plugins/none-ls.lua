@@ -1,9 +1,12 @@
 --          ╔═════════════════════════════════════════════════════════╗
---          ║                  None-ls Configuration                  ║
+--          ║                      None-ls.nvim                       ║
 --          ╚═════════════════════════════════════════════════════════╝
 
-
--- ══ Config from Ninjagor ════════════════════════════════════════════
+--          ┌─────────────────────────────────────────────────────────┐
+--          │ none-ls.nvim acts as a general-purpose language server  │
+--          │     for running linters, formatters, and other code     │
+--          │                     quality tools.                      │
+--          └─────────────────────────────────────────────────────────┘
 
 
 return {
@@ -13,7 +16,7 @@ return {
   dependencies = {
     "jay-babu/mason-null-ls.nvim",
   },
-  config = function()
+  config = function() -- config from Ninjagor
     local mason_null_ls = require("mason-null-ls")
 
     local null_ls = require("null-ls")

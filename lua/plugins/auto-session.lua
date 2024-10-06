@@ -1,9 +1,19 @@
 --          ╔═════════════════════════════════════════════════════════╗
---          ║                      auto-session                       ║
+--          ║                    auto-session.nvim                    ║
 --          ╚═════════════════════════════════════════════════════════╝
 
+--          ┌─────────────────────────────────────────────────────────┐
+--          │    AutoSession takes advantage of Neovim's existing     │
+--          │   session management capabilities to provide seamless   │
+--          │              automatic session management.              │
+--          └─────────────────────────────────────────────────────────┘
 
--- ══ session save and restore ════════════════════════════════════════
+
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+-- - [ ] Create a function to automatically open neotree in all buffers
+-- - [ ] Ensure buffer tabs display file name opposed to neo-tree placeholder text
+-- - [ ] Add discriptions to all functions for better understanding
 
 
 return {

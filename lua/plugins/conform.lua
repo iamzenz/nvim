@@ -1,4 +1,19 @@
--- ~/nvim/lua/slydragonn/plugins/formatter.lua
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                      conform.nvim                       ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │    `conform.nvim` provides automatic code formatting    │
+--          │   using a variety of formatters to ensure consistent    │
+--          │                       code style.                       │
+--          └─────────────────────────────────────────────────────────┘
+
+
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+--  - [ ] Add support for lua that functions with Nix
+
+
 
 return {
     "stevearc/conform.nvim",
@@ -35,3 +50,5 @@ return {
         end, { desc = "Format file or range (in visual mode)" })
     end,
 }
+
+-- config from slydragonn

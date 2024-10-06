@@ -2,8 +2,10 @@
 --          ║                   Mason Configuration                   ║
 --          ╚═════════════════════════════════════════════════════════╝
 
-
--- ══ Config from Ninjagor ════════════════════════════════════════════
+--          ┌─────────────────────────────────────────────────────────┐
+--          │ mason.nvim manages external editor tooling such as LSP  │
+--          │     servers, DAP servers, linters, and formatters.      │
+--          └─────────────────────────────────────────────────────────┘
 
 
 return {
@@ -13,7 +15,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
-  config = function()
+  config = function() -- config from Ninjagor
     -- import mason
     local mason = require("mason")
 

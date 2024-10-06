@@ -1,3 +1,13 @@
+--          ╔═════════════════════════════════════════════════════════╗
+--          ║                  nvim-treesitter.nvim                   ║
+--          ╚═════════════════════════════════════════════════════════╝
+
+--          ┌─────────────────────────────────────────────────────────┐
+--          │       nvim-treesitter.nvim provides better syntax       │
+--          │ highlighting and code understanding using Tree-sitter.  │
+--          └─────────────────────────────────────────────────────────┘
+
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
