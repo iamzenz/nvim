@@ -18,7 +18,9 @@
 -- - [x] Create TODO: script
 -- - [x] Create new TODO item keymap
 -- - [x] Add keymap to swap windows left to right
--- - [ ] Add keymap to open line a new line at the end of the file
+-- - [x] Add keymap to open line a new line at the end of the file
+-- - [x] Create keymap to "check" a TODO item
+-- - [ ] Update ^^^^^^ to restore cursor to original position
 
 
 
@@ -26,13 +28,16 @@ vim.g.mapleader = " " -- Set space as the leader key
 
 local keymap = vim.keymap.set -- the new way of setting keymaps
 
-
+-- Open new line at end of file
+keymap("n", "<leader>A", "Go", { desc = "Open new line at end of file" })
 
 -- Source keymaps.lua
 keymap("n", "<leader>R", ":source /home/mike/.config/nvim/lua/config/keymaps.lua<CR>", { desc = "Source keymaps.lua" })
 
 -- Command to add TODO comment with comment-box.nvim
 keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" }) -- zenzilla94
+keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" }) -- zenzilla94
+keymap("n", "<leader>rm", "0f[lrx", { desc = "Remove Mark" }) -- zenzilla94
 keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO: item below current line" })
 keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO: item below current line" })
 
@@ -51,7 +56,7 @@ keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
 
 -- NeoTree
 keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
-keymap("n", "<leader>r", "<CMD>Neotree focus<CR>", { desc = "Focus on NeoTree" })
+-- keymap("n", "<leader>ft", "<CMD>Neotree focus<CR>", { desc = "Focus on NeoTree" })
 
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New tab" })
@@ -149,3 +154,4 @@ keymap("n", "<leader>bO", "O<ESC>0D", { desc = "Open blank line above comment" }
 
 -- https://github.com/oyinbra/nvim-config
 -- Config inspo: slydragonn/maps.lua
+--
