@@ -12,6 +12,8 @@
 --  - [ ] Create a plugin to automatically add title, description and todo list for config files
 --  - [x] Add titles and descriptions to all plugins
 --  - [ ] Organize plugins by category?
+--  - [ ] Add lazy loading to all plugins
+--  - [x] Add a completion engine that actually works
 
 
 
