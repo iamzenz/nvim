@@ -81,6 +81,15 @@ return {
     lspconfig["pyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      settings = {
+        python = {
+          analysis = {
+            typeCheckingMode = "off", -- change this to "off", "basic", or "strict"
+            autoImportCompletions = true,
+            diagnosticMode = "workspace", -- could be "workspace" or "openFilesOnly"
+          },
+        },
+      },
     })
   end,
 }
