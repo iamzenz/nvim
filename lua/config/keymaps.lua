@@ -3,7 +3,7 @@
 --          ╚═════════════════════════════════════════════════════════╝
 
 --          ┌─────────────────────────────────────────────────────────┐
---          │     This file defines custom keymaps in Neovim for      │
+--          │     This file defines custmm keymaps in Neovim for      │
 --          │   improved navigation, editing, and task management,    │
 --          │             enhancing workflow efficiency.              │
 --          └─────────────────────────────────────────────────────────┘
@@ -19,8 +19,9 @@
 -- - [x] Create new TODO item keymap
 -- - [x] Add keymap to swap windows left to right
 -- - [x] Add keymap to open line a new line at the end of the file
--- - [x] Create keymap to "check" a TODO item
+-- - [ ] Create keymap to "check" a TODO item
 -- - [ ] Update ^^^^^^ to restore cursor to original position
+-- - [ ] Can I make it possible to undo entire TODO item with one undo?
 
 
 
@@ -35,9 +36,9 @@ keymap("n", "<leader>A", "Go", { desc = "Open new line at end of file" })
 keymap("n", "<leader>R", ":source /home/mike/.config/nvim/lua/config/keymaps.lua<CR>", { desc = "Source keymaps.lua" })
 
 -- Command to add TODO comment with comment-box.nvim
-keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" }) -- zenzilla94
-keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" }) -- zenzilla94
-keymap("n", "<leader>rm", "0f[lrx", { desc = "Remove Mark" }) -- zenzilla94
+keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" })
+keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" })
+keymap("n", "<leader>rm", "0f[lr ", { desc = "Remove checkMark" })
 keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO: item below current line" })
 keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO: item below current line" })
 
@@ -116,10 +117,10 @@ keymap("v", "<leader>y", '"+y', { desc = "Yank selection to system clipboard" })
 keymap("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" }) --asbjornHaland
 
 -- Delete without yanking
-keymap({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
+-- keymap({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
 -- Delete entire contents of current buffer
-keymap("n", "<leader>dd", ":%d<CR>", { desc = "Delete entire contents of current buffer" })
+-- keymap("n", "<leader>dd", ":%d<CR>", { desc = "Delete entire contents of current buffer" })
 
 -- LSP
 keymap("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" });
