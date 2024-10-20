@@ -22,6 +22,12 @@ return {
           font = "+2",
         },
       },
+      on_open = function()
+        vim.fn.system("tmux set status off")
+      end,
+      on_close = function()
+        vim.fn.system("tmux set status on")
+      end,
     })
 
     -- Set keymap to toggle Zen mode
