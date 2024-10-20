@@ -57,7 +57,7 @@ keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
 
 -- NeoTree
 keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
--- keymap("n", "<leader>ft", "<CMD>Neotree focus<CR>", { desc = "Focus on NeoTree" })
+keymap("n", "<leader>tf", "<CMD>Neotree focus<CR>", { desc = "Tree Focus" })
 
 -- Tabs
 keymap("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New tab" })
@@ -75,10 +75,10 @@ keymap("n", "<leader>h", "<CMD>split<CR>", { desc = "Open a new window horizonta
 
 
 -- Window Navigation
-keymap("n", "<A-h>", "<C-w>h", { desc = "Navigate to the left window" }) -- hint: use thumb to press alt
-keymap("n", "<A-l>", "<C-w>l", { desc = "Navigate to the right window" }) -- hint: use thumb to press alt
-keymap("n", "<A-k>", "<C-w>k", { desc = "Navigate to the window above" }) -- hint: use thumb to press alt
-keymap("n", "<A-j>", "<C-w>j", { desc = "Navigate to the window below" }) -- hint: use thumb to press alt
+-- keymap("n", "<A-h>", "<C-w>h", { desc = "Navigate to the left window" }) -- hint: use thumb to press alt
+-- keymap("n", "<A-l>", "<C-w>l", { desc = "Navigate to the right window" }) -- hint: use thumb to press alt
+-- keymap("n", "<A-k>", "<C-w>k", { desc = "Navigate to the window above" }) -- hint: use thumb to press alt
+-- keymap("n", "<A-j>", "<C-w>j", { desc = "Navigate to the window below" }) -- hint: use thumb to press alt
 keymap("n", "<A-s>", "<C-w>r", { desc = "Swap windows left to right" })
 
 -- Resize Windows
@@ -129,7 +129,7 @@ keymap("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file"
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Add executable permissions to the current buffer" })
 
 -- Replace the word under cursor thoughout the file
-keymap("n", "<leader>c", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Replace word under cursor" })
+keymap("n", "<leader>cw", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Replace word under cursor" })
 
 -- Insert a blank line below or above current line
 keymap("n", "<leader>o", "printf('m`%so<ESC>``', v:count1)", {
