@@ -9,6 +9,14 @@
 --          └─────────────────────────────────────────────────────────┘
 
 
+-- ══ TODO: ═══════════════════════════════════════════════════════════
+--
+--  - [ ] Set cursorline highlight
+--  - [ ] Set CursorLineNr highlight in overrides of config
+--  - [ ] Do I have all the config options and overrides I need?
+
+
+
 return {
 	{
 		"rebelot/kanagawa.nvim",
