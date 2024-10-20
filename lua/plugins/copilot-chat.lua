@@ -2,7 +2,6 @@
 --          ║                       CopilotChat                       ║
 --          ╚═════════════════════════════════════════════════════════╝
 
-
 -- ══ TODO: ═══════════════════════════════════════════════════════════
 --
 -- - [ ] Need access to the rest of the commands
@@ -13,15 +12,15 @@ return {
         "CopilotC-Nvim/CopilotChat.nvim",
         branch = "canary",
         dependencies = {
-            { "github/copilot.vim" }, -- or github/copilot.vim
-            { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+            { "github/copilot.vim" },
+            { "nvim-lua/plenary.nvim" },
         },
         event = "VeryLazy",
         opts = {
             show_help = "yes", -- Show help text for CopilotChatInPlace, default: yes
             debug = false, -- Enable or disable debug mode, the log file will be in ~/.local/state/nvim/CopilotChat.nvim.log
             disable_extra_info = 'no', -- Disable extra information (e.g: system prompt) in the response.
-            language = "English" -- Copilot answer language settings when using default prompts. Default language is English.
+            language = "English", -- Copilot answer language settings when using default prompts. Default language is English.
             -- proxy = "socks5://127.0.0.1:3000", -- Proxies requests via https or socks.
             -- temperature = 0.1,
         },
@@ -40,11 +39,30 @@ return {
                     width = 0.6,
                     height = 0.7,
                     border = "rounded",
+                    zindex = 100,
                 },
                 mappings = {
                     close = {
                         normal = "q",
-                        insert = "C-q",
+                        insert = "C-c",
+                    },
+                    reset = {
+                        normal = '<C-r>',
+                        insert = '<C-r>',
+                    },
+                    accept_diff = {
+                        normal = '<C-y>',
+                        insert = '<C-y>',
+                    },
+                    yank_diff = {
+                        normal = 'gy',
+                        register = '"',
+                    },
+                    show_diff = {
+                        normal = 'gd',
+                    },
+                    show_system_prompt = {
+                        normal = 'gp',
                     },
                 },
                 selection = function(source)
@@ -59,11 +77,11 @@ return {
             { "<leader>ccf", "<cmd>CopilotChatFix<cr>", desc = "CopilotChat - Fix" },
             { "<leader>cco", "<cmd>CopilotChatOptimize<cr>", desc = "CopilotChat - Optimize" },
             { "<leader>ccd", "<cmd>CopilotChatDocs<cr>", desc = "CopilotChat - Add Documentation" },
-            { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
-            { "<leader>ccd", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - diagnostic issue in file" },
+            { "<leader>ccT", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
+            { "<leader>ccD", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix diagnostic issue in file" },
             { "<leader>ccc", "<cmd>CopilotChatCommit<cr>", desc = "CopilotChat - Commit message" },
-            { "<leader>ccs", "<cmd>CopilotChatCommitStaged<cr>", desc = "CopilotChat - Commit message" },
-            { "<leader>ccT", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
+            { "<leader>ccs", "<cmd>CopilotChatCommitStaged<cr>", desc = "CopilotChat - Commit staged changes" },
+            { "<leader>cct", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
             {
                 "<leader>ccq",
                 function()
