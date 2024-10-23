@@ -14,6 +14,7 @@
 --  - [x] Set cursorline highlight
 --  - [x] Set CursorLineNr highlight in overrides of config
 --  - [ ] Do I have all the config options and overrides I need?
+--  - [ ] add kanagawa to my kitty config
 
 
 
