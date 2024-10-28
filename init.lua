@@ -14,6 +14,7 @@
 --  - [ ] Organize plugins by category?
 --  - [ ] Add lazy loading to all plugins
 --  - [x] Add a completion engine that actually works
+--  - [ ] Get dap and dap-ui working
 
 
 
