@@ -38,7 +38,8 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.linebreak = true
+
 
 -- turn of swap files and setup undodir
 vim.opt.swapfile = false
