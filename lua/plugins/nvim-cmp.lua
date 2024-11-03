@@ -10,7 +10,7 @@
 
 return {
     "hrsh7th/nvim-cmp",
-    enabled = false,
+    enabled = true,
     
     event = "InsertEnter",
     dependencies = {
@@ -18,6 +18,8 @@ return {
         "hrsh7th/cmp-path", -- source for file system paths
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim", -- vs-code like pictograms
+        -- add obsidian sources
+        "epwalsh/obsidian.nvim",
     },
     config = function() -- config from slydragonn
         local cmp = require("cmp")
@@ -44,6 +46,7 @@ return {
                 { name = "luasnip" },
                 { name = "buffer" },
                 { name = "path" },
+                { name = "obsidian" },
             }),
 
             formatting = {
