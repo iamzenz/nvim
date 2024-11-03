@@ -35,6 +35,8 @@ keymap("n", "<leader>A", "Go", { desc = "Open new line at end of file" })
 -- Source keymaps.lua
 keymap("n", "<leader>R", ":source /home/mike/.config/nvim/lua/config/keymaps.lua<CR>", { desc = "Source keymaps.lua" })
 
+keymap("n", "nnp", "<CMD>NoNeckPain<CR>", { desc = "Activate NoNeckPain" })
+
 -- Command to add TODO comment with comment-box.nvim
 keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" })
 keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" })
@@ -53,7 +55,11 @@ keymap("n", "<leader>w", "<CMD>update<CR>", { desc = "Save" })
 keymap("n", "<leader>q", "<CMD>qa<CR><CR>", { desc = "Quit" })
 
 -- Exit insert mode
-keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
+keymap("i", "jk", "<ESC>")
+
+-- Navigate one line at a time, even with wrapped lines
+keymap({"n", "v"}, "j", "gj", { desc = "Move down one line, even with wrapped lines" })
+keymap({"n", "v"}, "k", "gk", { desc = "Move up one line, even with wrapped lines" })
 
 -- NeoTree
 keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
