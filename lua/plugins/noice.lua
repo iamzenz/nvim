@@ -8,11 +8,11 @@
 --          └─────────────────────────────────────────────────────────┘
 
 
--- ══ TODO: ═══════════════════════════════════════════════════════════
+-- ══ TODO: and TIPS: ═════════════════════════════════════════════════
 --
---  - [ ] Add toggle for notifications
-
-
+-- - [x] Add toggle for notifications
+--
+-- - Use ':NoiceHistory' to view the history of notifications
 
 
 return {
