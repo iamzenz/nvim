@@ -7,15 +7,15 @@
 --          │     provides an extensible and highly configurable      │
 --          │               auto-completion framework.                │
 --          └─────────────────────────────────────────────────────────┘
-
 return {
     "hrsh7th/nvim-cmp",
     enabled = true,
-    
+
     event = "InsertEnter",
     dependencies = {
         "hrsh7th/cmp-buffer", -- source for text in buffer
         "hrsh7th/cmp-path", -- source for file system paths
+        "zbirenbaum/copilot-cmp",
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim", -- vs-code like pictograms
         -- add obsidian sources
@@ -46,11 +46,17 @@ return {
                 { name = "luasnip" },
                 { name = "buffer" },
                 { name = "path" },
+                { name = "copilot", group_index = 2 },
                 { name = "obsidian" },
             }),
 
             formatting = {
-                format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }),
+                format = lspkind.cmp_format({
+                    with_text = true,
+                    maxwidth = 50,
+                    -- symbol_map = { Copilot = "" }
+                }),
+
             },
         })
 
