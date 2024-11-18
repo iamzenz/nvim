@@ -19,7 +19,7 @@ return {
           path = "~/Documents/My Beautiful, Dark, Twisted Vault/",
         },
       },
-      new_notes_location = "current_dir",
+      new_notes_location = "Inbox",
       -- set daily notes to be created in journal directory
       daily_notes = {
         directory = "~/Documents/Zettlekasten/journal/",
