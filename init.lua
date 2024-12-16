@@ -41,10 +41,10 @@ vim.opt.smartindent = true
 vim.opt.linebreak = true
 
 
--- turn of swap files and setup undodir
+-- turn off swap files and setup undodir
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
 vim.opt.undofile = true
 
 -- incremental search highlights matches as you type
