@@ -10,10 +10,10 @@ return {
   config = function()
     require("obsidian").setup {
       workspaces = {
-        {
-          name = "zettlekasten",
-          path = "~/Documents/Zettlekasten/",
-        },
+        -- {
+        --   name = "zettlekasten",
+        --   path = "~/Documents/Zettlekasten/",
+        -- },
         {
           name = "mbdtv",
           path = "~/Documents/My Beautiful, Dark, Twisted Vault/",
