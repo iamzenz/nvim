@@ -21,9 +21,9 @@ return {
       },
       new_notes_location = "Inbox",
       -- set daily notes to be created in journal directory
-      daily_notes = {
-        directory = "~/Documents/Zettlekasten/journal/",
-      },
+      -- daily_notes = {
+      --   directory = "~/Documents/Zettlekasten/journal/",
+      -- },
       disable_frontmatter = true,
       note_frontmatter_func = nil,
       ui = { enable = false },
