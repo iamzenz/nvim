@@ -6,13 +6,13 @@
 --
 -- - [ ] Need access to the rest of the commands
 -- - [ ] Copilot autocomplete <tab> does not work within the chat
--- - [ ] 
+-- - [ ]
 
 return {
     {
         "CopilotC-Nvim/CopilotChat.nvim",
         enable = false,
-        branch = "canary",
+        branch = "main",
         dependencies = {
             { "zbirenbaum/copilot.lua" },
             { "nvim-lua/plenary.nvim" },
@@ -63,7 +63,7 @@ return {
                     show_diff = {
                         normal = 'gd',
                     },
-                    show_system_prompt = {
+                    show_info = {
                         normal = 'gp',
                     },
                 },
