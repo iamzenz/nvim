@@ -44,7 +44,7 @@ vim.opt.linebreak = true
 -- turn off swap files and setup undodir
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/home/mike/.vim/undodir"
 vim.opt.undofile = true
 
 -- incremental search highlights matches as you type
