@@ -10,20 +10,27 @@ return {
   config = function()
     require("obsidian").setup {
       workspaces = {
-        -- {
-        --   name = "zettlekasten",
-        --   path = "~/Documents/Zettlekasten/",
-        -- },
+        {
+          name = "zettlekasten",
+          path = "~/Documents/Zettlekasten/",
+        },
         {
           name = "mbdtv",
           path = "~/Documents/My Beautiful, Dark, Twisted Vault/",
         },
       },
-      new_notes_location = "Inbox",
+      notes_subdir = "Inbox",
       -- set daily notes to be created in journal directory
       -- daily_notes = {
-      --   directory = "~/Documents/Zettlekasten/journal/",
+          --   directory = "~/Documents/Zettlekasten/journal/",
       -- },
+      daily_notes = {
+        -- Optional, if you keep daily notes in a separate directory.
+        folder = "Journal",
+        -- Optional, if you want to change the date format for the ID of daily notes.
+        date_format = "%Y-%m-%d",
+      },
+
       disable_frontmatter = true,
       note_frontmatter_func = nil,
       ui = { enable = false },
