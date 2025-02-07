@@ -44,6 +44,10 @@ keymap("n", "<leader>rm", "0f[lr ", { desc = "Remove checkMark" })
 keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO: item below current line" })
 keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO: item below current line" })
 
+
+-- ToggleTerm
+keymap("n", "<leader>tt", "<CMD>ToggleTerm<CR>", { desc = "Open ToggleTerm" })
+
 -- Move current line/block in insert mode
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move current line / block down" }) -- lunarvim
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move current line / block up" }) -- lunarvim
