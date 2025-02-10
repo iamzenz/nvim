@@ -25,6 +25,7 @@ return {
                 -- don't mess up my apostrophes
                 ["'"]   = { escape = true, close = true, pair = "''", disabled_filetypes = { "text", "markdown", "md" } },
                 ["`"]   = { escape = true, close = true, pair = "``", disabled_filetypes = { "text", "markdown", "md" } },
+                ["%"]   = { escape = true, close = true, pair = "%%", disabled_filetypes = { "text", "markdown", "md" } },
                 ["$"]   = { escape = true, close = true, pair = "$$", enabled_filetypes = { "latex" } },
             },
             options = {

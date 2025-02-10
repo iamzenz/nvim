@@ -19,7 +19,7 @@ return {
     config = function()
       local treesitter = require("nvim-treesitter.configs")
 
-      treesitter.setup({
+      require("nvim-ts-autotag").setup({
         incremental_selection = {
           enable = false,
           keymaps = {
@@ -30,12 +30,15 @@ return {
         highlight = {
           enable = true,
         },
-        -- indent = { enable = true },
-        autotag = { enable = false },
+        indent = { enable = true },
+        autotag = { enable = true },
         ensure_installed = {
           "yaml",
           "markdown",
           "markdown_inline",
+          "html",
+          "css",
+          "javascript",
           "lua",
           "gitignore",
           "nix",

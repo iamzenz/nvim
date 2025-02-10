@@ -51,6 +51,8 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "pylint", -- python linter
+        "htmlhint", -- html linter
+        "html-lsp", -- html language server
       },
     })
   end,

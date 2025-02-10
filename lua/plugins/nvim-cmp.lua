@@ -19,11 +19,17 @@ return {
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim", -- vs-code like pictograms
         -- add obsidian sources
+        "L3MON4D3/LuaSnip", -- snippet engine
         "epwalsh/obsidian.nvim",
     },
     config = function() -- config from slydragonn
         local cmp = require("cmp")
         local lspkind = require("lspkind")
+        local luasnip = require("luasnip")
+
+        -- Load friendly-snippets
+        require("luasnip.loaders.from_vscode").lazy_load()
+
 
         cmp.setup({
             snippet = {
@@ -44,6 +50,7 @@ return {
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
+                { name = "friendly-snippets" },
                 { name = "buffer" },
                 { name = "path" },
                 { name = "copilot", group_index = 2 },
